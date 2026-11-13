@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+}
+
+model Usuario {
+  id      Int      @id @default(autoincrement())
+  nome    String   @db.VarChar(255)
+  email   String   @unique @db.VarChar(255)
+  tarefas Tarefa[]
+
+  @@map("usuarios")
+}
+
+model Tarefa {
+  id           Int      @id @default(autoincrement())
+  descricao    String   @db.VarChar(255)
+  setor        String   @db.VarChar(255)
+  prioridade   String   @db.VarChar(50)
+  status       String   @default("a fazer") @db.VarChar(50)
+  dataCadastro DateTime @default(now())
+  usuarioId    Int
+  usuario      Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+
+  @@map("tarefas")
+}

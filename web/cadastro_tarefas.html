@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Tarefas</h1>
+        <nav>
+            <a href="index.html">Cadastro de Usuários</a>
+            <a href="cadastro_tarefas.html" class="ativo">Cadastro de Tarefas</a>
+            <a href="gerenciar_tarefas.html">Gerenciar Tarefas</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2 id="tituloFormTarefa">Cadastro de Tarefas</h2>
+        <form id="formTarefa">
+            <input type="hidden" id="tarefaIdInput">
+            <div class="campo">
+                <label for="descricaoTarefa">Descrição:</label>
+                <input type="text" id="descricaoTarefa" placeholder="Descrição da tarefa" required>
+            </div>
+            <div class="campo">
+                <label for="setorTarefa">Setor:</label>
+                <input type="text" id="setorTarefa" placeholder="Setor responsável" required>
+            </div>
+            <div class="campo">
+                <label for="selectUsuarioTarefa">Usuário:</label>
+                <select id="selectUsuarioTarefa" required>
+                    <option value="">Selecione o Usuário</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="prioridadeTarefa">Prioridade:</label>
+                <select id="prioridadeTarefa" required>
+                    <option value="Baixa">Baixa</option>
+                    <option value="Média">Média</option>
+                    <option value="Alta">Alta</option>
+                </select>
+            </div>
+            <button type="submit" id="btnSalvarTarefa">Cadastrar</button>
+            <p id="mensagemTarefa" class="mensagem"></p>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

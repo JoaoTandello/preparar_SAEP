@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Tarefas</h1>
+        <nav>
+            <a href="index.html" class="ativo">Cadastro de usuários</a>
+            <a href="cadastro_tarefas.html">Cadastro de tarefas</a>
+            <a href="gerenciar_tarefas.html">Gerenciar tarefas</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Cadastro de Usuários</h2>
+        <form id="formUsuario">
+            <div class="campo">
+                <label for="nomeUsuarioInput">nome:</label>
+                <input type="text" id="nomeUsuarioInput">
+            </div>
+            <div class="campo">
+                <label for="emailUsuarioInput">e-mail:</label>
+                <input type="email" id="emailUsuarioInput">
+            </div>
+            <button type="submit">Cadastrar</button>
+            <p id="mensagemUsuario" class="mensagem"></p>
+        </form>
+
+        <section class="lista-usuarios">
+            <h2>Usuários cadastrados (<span id="quantidadeUsuarios">0</span>)</h2>
+            <div id="listaUsuarios">
+                <p class="vazio">Carregando usuários</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

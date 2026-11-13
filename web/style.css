@@ -1,0 +1,355 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #252525;
+    min-height: 100vh;
+}
+
+
+header {
+    background-color: #0056b3;
+    color: white;
+    padding: 18px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 13px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a.ativo {
+    background-color: #ffffff30;
+}
+
+
+main {
+    padding: 30px 35px;
+}
+
+main h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #252525;
+}
+
+/* Formulários */
+
+form {
+    width: 420px;
+    max-width: 100%;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: white;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #0056b3;
+}
+
+form button[type="submit"] {
+    padding: 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #004494;
+}
+
+
+.kanban-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: start;
+    margin-top: 20px;
+}
+
+.coluna {
+    background-color: #edf0f4;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    min-height: 180px;
+}
+
+.coluna h3 {
+    font-size: 17px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0056b3;
+}
+
+
+.card-tarefa {
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 7px;
+    padding: 16px;
+    margin-bottom: 13px;
+}
+
+.card-tarefa h3 {
+    font-size: 16px;
+    margin: 8px 0 12px;
+}
+
+.card-tarefa p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 7px;
+    color: #444;
+}
+
+.card-tarefa select {
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+
+.prioridade {
+    display: inline-block;
+    background-color: #eee;
+    padding: 5px 9px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.prioridade.alta {
+    background-color: #f8dddd;
+    color: #a22;
+}
+
+.prioridade.baixa {
+    background-color: #e0f0e2;
+    color: #286638;
+}
+
+
+.card-acoes {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+    flex-wrap: wrap;
+}
+
+.card-acoes button,
+.btn-status {
+    padding: 7px 12px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.card-acoes button:hover,
+.btn-status:hover {
+    background-color: #004494;
+}
+
+.card-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.card-botoes button,
+.botao-claro {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 11px;
+    cursor: pointer;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.botao-claro {
+    background-color: #e8edf2;
+    color: #252525;
+}
+
+.excluir {
+    background-color: #ad5145;
+    color: white;
+}
+
+.salvar-status {
+    background-color: #0056b3;
+    color: white;
+}
+
+
+.status-opcoes {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 12px 0;
+    font-size: 13px;
+}
+
+
+.lista-usuarios {
+    margin-top: 30px;
+    max-width: 650px;
+}
+
+.lista-usuarios h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.usuario {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.usuario small {
+    display: block;
+    color: #777;
+    margin-top: 5px;
+}
+
+
+.mensagem {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.mensagem:empty {
+    display: none;
+}
+
+.sucesso {
+    color: #208838;
+}
+
+.erro {
+    color: #cc402d;
+}
+
+.vazio {
+    color: #777;
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+
+
+@media (max-width: 900px) {
+    .kanban-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 22px 15px;
+    }
+
+    main h2 {
+        font-size: 20px;
+    }
+
+    .kanban-container {
+        grid-template-columns: 1fr;
+    }
+
+    .usuario {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

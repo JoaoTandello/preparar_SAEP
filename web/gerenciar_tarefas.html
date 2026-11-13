@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Tarefas</h1>
+        <nav>
+            <a href="index.html">Cadastro de Usuários</a>
+            <a href="cadastro_tarefas.html">Cadastro de Tarefas</a>
+            <a href="gerenciar_tarefas.html" class="ativo">Gerenciar Tarefas</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Tarefas</h2>
+        <p id="mensagemQuadro" class="mensagem"></p>
+        <div class="kanban-container">
+            <div class="coluna">
+                <h3>A Fazer</h3>
+                <div id="colunaAFazer"></div>
+            </div>
+            <div class="coluna">
+                <h3>Fazendo</h3>
+                <div id="colunaFazendo"></div>
+            </div>
+            <div class="coluna">
+                <h3>Pronto</h3>
+                <div id="colunaPronto"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
